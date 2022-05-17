@@ -1,37 +1,216 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/prosperidadeonline/1/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<html>
+<head>
 
-### Markdown
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-resizable=no">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  <meta charset="utf-8">
 
-```markdown
-Syntax highlighted code block
+  <style type="text/css">
 
-# Header 1
-## Header 2
-### Header 3
+    .content-blockquote{border-left: 4px solid #C4170C;margin-top: calc(3% + .5vw);margin-bottom: calc(3% + .5vw);    font-size: 1.5rem !important;
+    text-align: left;
+    padding-left: 1rem;
+    line-height: 2rem;
+    font-weight: 600 !important;
+    letter-spacing: -.0625rem;}
+@media (min-width: 64rem){
+.content-blockquote {
+    font-size: 1.5rem !important  ;
+    line-height: 2.25rem;
+    padding-left: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  
+      font-weight: 500 !important;
+    
+}}
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+    .btn-danger{
+      width: 90%;
+      font-weight: 500;
+      font-size: 1.2em;
+      margin-bottom:10px;
+      background-color: #FF1000;
+    }
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+    .divs{
+        font-size: 1.2em;
+        color: #212529;
+        text-align: justify;
+      }
 
-### Jekyll Themes
+    @media (max-width: 430px){
+      .divs{
+        width: 90% !important;
+      }
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/prosperidadeonline/1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    } 
 
-### Support or Contact
+    .header {
+      padding: 5px 16px;
+      padding-bottom: 5px;
+      background-color: #20B9FF;
+      height: 10vh;
+      width: 100%
+        }
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+    }
+
+    .sticky + .content {
+        padding-top: 102px;
+    }
+
+
+    
+
+    .btn-primary:hover{
+      background-color: #2E3138;
+      border: none !important;
+    }
+
+    .btn-primary:focus{
+      background-color: #2E3138;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+
+    .btn-primary{
+      background-color: #2E3138;
+      border: none;
+    }
+
+    .btn-primary:active{
+      background-color: #2E3138 !important;
+      border: none;
+      box-shadow: none !important;
+    }
+.jumbotron.vertical-center {
+  margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+  </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+  
+
+  var te = 0;
+
+    function modifyText(t) {
+      var query = location.search.slice(1);
+var partes = query.split('&');
+var data = {};
+partes.forEach(function (parte) {
+    var chaveValor = parte.split('=');
+    var chave = chaveValor[0];
+    var valor = chaveValor[1];
+    data[chave] = valor;
+});
+
+var url = data['src'];
+      t++;
+
+      if (t == 1) {
+        document.getElementById("txt").innerHTML="“Espera! temos um código promocional somente para este primeiro acesso. Você aceita este desconto?”";
+        te = 1;
+      }
+      
+      if (t == 2) {
+        window.location.replace('https://quizmdr.github.io/pag/?' + query);
+      }
+    }
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+      var back_redirect_back_link = 'https://quizmdr.github.io/pag/?';
+
+      history.pushState({},"",location.href);
+        history.pushState({},"",location.href);
+
+        window.onpopstate = function(){
+            setTimeout(function () {
+              location.href = back_redirect_back_link;
+            },1);
+        };
+    </script>
+</head>
+<body>
+<div class="jumbotron vertical-center">
+<div class='container'>
+<p class="content-blockquote " id="txt"> 
+“Você terá acesso a depoimentos e comentários de pessoas que estão ganhando salários semanais apertando poucos botões no celular. Você também quer ter uma máquina de dinheiro em seu celular?”  
+</p><center><button type="button" style="margin-right:15px;font-weight: bold" onclick="modifyText(te)" class='btn btn-success btn-lg'>SIM EU QUERO!</button><button type="button" onclick="modifyText(te)" class='btn btn-warning btn-lg'>Não</button>
+</center></div>
+</div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QQCDNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+
+
+
+</html>

@@ -165,13 +165,8 @@ partes.forEach(function (parte) {
 
 var url = data['src'];
       t++;
-
-      if (t == 1) {
-        document.getElementById("txt").innerHTML="“Espera! temos um código promocional somente para este primeiro acesso. Você aceita este desconto?”";
-        te = 1;
-      }
       
-      if (t == 2) {
+      if (t == 1) {
         window.location.replace('https://quizmdr.github.io/pag/?' + query);
       }
     }
